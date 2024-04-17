@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:
+## Date: 14/02/2024
 
 ## AIM:
 To develop a simple webserver to serve html pages.
@@ -24,83 +24,47 @@ Testing the webserver.
 ```
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <title> simple webserver </title>
+    </head>
+    <body>
+       <table border="2" cellspacing="12" cellpadding="12" height="25" width="50">
+       <h1> TOP FIVE SOFTWARE COMPANIES </h1>
+            <tr>
+                <th>Rank</th>
+                <th>Company</th>
+                <th>Revenue(in billion USD)</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <th>Microsoft</th>
+                <th>$143.0</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>Oracle</th>
+                <th>$39.1</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>SAP</th>
+                <th>$27.4</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>Salesforce</th>
+                <th>$17.1</th>
+            </tr>
+            <tr>
+                <th>5</th>
+                <th>Adobe</th>
+                <th>$12.9</th>
+            </tr>
+        </table>
+    </body>
+</html>           
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainbow Login Page</title>
-    <style>
-        /* Style the body */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            font-family: Arial, sans-serif;
-        }
-
-        /* Style the form container */
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Style the input fields */
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        /* Style the login button */
-        .login-container input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #6a1b9a;
-            border: none;
-            color: white;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* Add hover effect for the login button */
-        .login-container input[type="submit"]:hover {
-            background-color: #4a148c;
-        }
-
-        /* Style the heading */
-        .login-container h1 {
-            text-align: center;
-            color: #6a1b9a;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="#">
-            <input type="text" placeholder="Username" required><br>
-            <input type="password" placeholder="Password" required><br>
-            <input type="submit" value="Login">
-        </form>
-    </div>
-</body>
-
-</html>
 
 
 """
@@ -116,11 +80,13 @@ httpd = HTTPServer(server_address,myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
 
+
 ```
 
 ## OUTPUT:
-![alt text](op1.jpg)
-![alt text](op2.jpg)
+![op1](https://github.com/charu-dharshinii/simplewebserver/assets/130828943/a909c630-ecb3-4a8d-9f64-2860c45e0c79)
+
+![op2](https://github.com/charu-dharshinii/simplewebserver/assets/130828943/c863c446-27cf-419d-bbb9-74ba1fd9819c)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
